@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CactusClicker EQ</title>
+     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        th,
+        td {
+            padding: 0.5rem;
+            text-align: left;
+            vertical-align: middle;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: normal;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        @media (max-width: 768px) {
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+
+            th,
+            td {
+                padding: 0.5rem;
+                border: none;
+            }
+
+            th {
+                display: inline-block;
+                margin-bottom: 0.5rem;
+            }
+
+            tr {
+                margin-bottom: 0.5rem;
+            }
+        }
+         
+.cell-uncoomon { background-color: rgba(0, 245, 0, 0.8); }
+.cell-rare { background-color: rgba(0, 0, 230, 0.8); }
+.cell-epic { background-color: rgba(128, 0, 128, 0.8); }
+.cell-legendary { background-color: rgba(255, 215, 0, 0.8); }
+         
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <input type="text" id="searchInput1" oninput="searchTable()" placeholder="Suche...">
+    <input type="text" id="searchInput2" placeholder="WIP">
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Welle</th>
+                <th>Monster</th>
+                <th>Anzahl</th>
+            </tr>
+        </thead>
+        <tbody id="data-table-body">
+        </tbody>
+    </table>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
